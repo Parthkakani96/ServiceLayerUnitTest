@@ -18,4 +18,6 @@ public interface TutorialRepository extends JpaRepository<Tutorial, Long> {
 
     List<Tutorial> findByDescriptionContaining(String description);
 
+    List<Tutorial> findByInPrint(boolean inPrint);
+
 }

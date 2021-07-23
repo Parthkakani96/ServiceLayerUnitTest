@@ -25,15 +25,19 @@ public class Tutorial {
     @Column
     private String author;
 
+    @Column
+    private boolean inPrint;
+
     public Tutorial() {}
 
-    public Tutorial(String title, String description, boolean published, boolean inStore, String author) {
+    public Tutorial(String title, String description, boolean published, boolean inStore, String author, boolean inPrint) {
         super();
         this.title = title;
         this.description = description;
         this.published = published;
         this.inStore = inStore;
         this.author = author;
+        this.inPrint = inPrint;
     }
 
     public long getId() {
@@ -84,6 +88,14 @@ public class Tutorial {
         this.author = author;
     }
 
+    public boolean isInPrint() {
+        return inPrint;
+    }
+
+    public void setInPrint(boolean inPrint) {
+        this.inPrint = inPrint;
+    }
+
     @Override
     public String toString() {
         return "Tutorial{" +
@@ -93,6 +105,7 @@ public class Tutorial {
                 ", published=" + published +
                 ", inStore=" + inStore +
                 ", author='" + author + '\'' +
+                ", inPrint=" + inPrint +
                 '}';
     }
 }
